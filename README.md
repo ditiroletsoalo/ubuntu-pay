@@ -2,7 +2,7 @@
 
 **Instant, accountable social grant disbursement for South Africa — straight from government to the spaza shop, with no middleman and no missed payday.**
 
-Built for Interledger FIH · Team Team 7
+Built for Interledger FIH · Team 7
 
 ---
 
