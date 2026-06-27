@@ -61,53 +61,68 @@ const RECIPIENTS = {
 const TEMPLATES = {
   en: {
     sms:  (name, amount, otp) =>
-      `Hi ${name}! Your SASSA grant of R${amount.toFixed(2)} is ready to collect. ` +
-      `Visit your nearest spaza shop with your ID to get your money. Your one-time PIN is ${otp}. Stay safe!`,
+      `Hello ${name}! Your SASSA money, amount R${amount.toFixed(2)} is ready for collection. ` +
+      `You may proceed to your closest agent registered spazashop with your ID. ` +
+      `Your OTP is ${otp}. Never share this OTP with anyone. ` +
+      `All payments are in full, report any added fees. @Ubuntu PAY`,
     call: (name, amount, otp) =>
-      `Hello ${name}. This is QuikPay. ` +
-      `Your SASSA grant of R${amount.toFixed(2)} is now available. ` +
-      `Your one-time PIN is ${otp}. ` +
-      `Please visit your nearest spaza shop with your ID to collect your money. Goodbye.`,
+      `Hello ${name}. This is Ubuntu PAY. ` +
+      `Your SASSA money, amount R${amount.toFixed(2)} is ready for collection. ` +
+      `You may proceed to your closest agent registered spaza shop with your ID. ` +
+      `Your OTP is ${otp}. Never share this OTP with anyone. ` +
+      `All payments are in full. Please report any added fees. Goodbye.`,
   },
   zu: {
     sms:  (name, amount, otp) =>
-      `Sawubona ${name}! Imali yakho ye-SASSA ka-R${amount.toFixed(2)} ilungele ukuthathwa. ` +
-      `Hamba esitolo esiseduzane nawe nge-ID yakho ukuze uthole imali yakho. Iphinikhodi yakho yiyi ${otp}.`,
+      `Sawubona ${name}! Imali yakho ye-SASSA, eyimali ka-R${amount.toFixed(2)} isilungele ukulandwa. ` +
+      `Ungaya esitolo se-agent esibhalisiwe esiseduze nawe nge-ID yakho. ` +
+      `I-OTP yakho ngu ${otp}. Ungalokothi wabelane nanoma ubani nge-OTP. ` +
+      `Zonke izinkokhelo zigcwele, bika noma yiziphi izindleko ezengeziwe. @Ubuntu PAY`,
     call: (name, amount, otp) =>
-      `Sawubona ${name}. Lena i-QuikPay. ` +
-      `Imali yakho ye-SASSA ka-R${amount.toFixed(2)} ikulindile. ` +
-      `Iphinikhodi yakho yiyi ${otp}. ` +
-      `Hamba esitolo esiseduzane nawe nge-ID yakho ukuze uthole imali yakho. Ngiyabonga.`,
+      `Sawubona ${name}. Lena i-Ubuntu PAY. ` +
+      `Imali yakho ye-SASSA, eyimali ka-R${amount.toFixed(2)} isilungele ukulandwa. ` +
+      `Ungaya esitolo se-agent esibhalisiwe esiseduze nawe nge-ID yakho. ` +
+      `I-OTP yakho ngu ${otp}. Ungalokothi wabelane nanoma ubani nge-OTP. ` +
+      `Zonke izinkokhelo zigcwele. Sicela ubike noma yiziphi izindleko ezengeziwe. Sale kahle.`,
   },
   xh: {
     sms:  (name, amount, otp) =>
-      `Molo ${name}! Imali yakho ye-SASSA ye-R${amount.toFixed(2)} ilungele ukuziwa. ` +
-      `Yiya kwivenkile ekufuphi nawe ne-ID yakho ukuze ufumane imali yakho. Iphin yakho yi ${otp}.`,
+      `Molo ${name}! Imali yakho ye-SASSA, esixa esiyi-R${amount.toFixed(2)} ilungele ukulandwa. ` +
+      `Ungaya kwivenkile ye-agent ebhalisiweyo ekufuphi nawe nge-ID yakho. ` +
+      `I-OTP yakho ngu ${otp}. Soze wabelane ngale-OTP nabani na. ` +
+      `Zonke iintlawulo zipheleleyo, xela nayiphi na imali eyongezelelweyo. @Ubuntu PAY`,
     call: (name, amount, otp) =>
-      `Molo ${name}. Esi yi-QuikPay. ` +
-      `Imali yakho ye-SASSA ye-R${amount.toFixed(2)} ilungele. ` +
-      `Iphin yakho yi ${otp}. ` +
-      `Yiya kwivenkile ekufuphi nawe ne-ID yakho ukuze ufumane imali yakho. Enkosi.`,
+      `Molo ${name}. Le yi-Ubuntu PAY. ` +
+      `Imali yakho ye-SASSA, esixa esiyi-R${amount.toFixed(2)} ilungele ukulandwa. ` +
+      `Ungaya kwivenkile ye-agent ebhalisiweyo ekufuphi nawe nge-ID yakho. ` +
+      `I-OTP yakho ngu ${otp}. Soze wabelane ngale-OTP nabani na. ` +
+      `Zonke iintlawulo zipheleleyo. Nceda uxele nayiphi na imali eyongezelelweyo. Sala kakuhle.`,
   },
   af: {
     sms:  (name, amount, otp) =>
-      `Hallo ${name}! Jou SASSA-toelae van R${amount.toFixed(2)} is gereed om te afhaal. ` +
-      `Besoek jou naaste spaza-winkel met jou ID om jou geld te kry. Jou eenmalige PIN is ${otp}.`,
+      `Hallo ${name}! Jou SASSA-geld, ten bedrae van R${amount.toFixed(2)} is gereed om afgehaal te word. ` +
+      `Jy kan na jou naaste geregistreerde agent-spazawinkel gaan met jou ID. ` +
+      `Jou OTP is ${otp}. Deel hierdie OTP nooit met iemand nie. ` +
+      `Alle betalings is ten volle, rapporteer enige bykomende fooie. @Ubuntu PAY`,
     call: (name, amount, otp) =>
-      `Goeiedag ${name}. Dit is QuikPay. ` +
-      `Jou SASSA-toelae van R${amount.toFixed(2)} is nou beskikbaar. ` +
-      `Jou eenmalige PIN is ${otp}. ` +
-      `Besoek jou naaste spaza-winkel met jou ID om jou geld te kry. Totsiens.`,
+      `Goeiedag ${name}. Dit is Ubuntu PAY. ` +
+      `Jou SASSA-geld, ten bedrae van R${amount.toFixed(2)} is gereed om afgehaal te word. ` +
+      `Jy kan na jou naaste geregistreerde agent-spazawinkel gaan met jou ID. ` +
+      `Jou OTP is ${otp}. Deel hierdie OTP nooit met iemand nie. ` +
+      `Alle betalings is ten volle. Rapporteer asseblief enige bykomende fooie. Totsiens.`,
   },
   nso: {
     sms:  (name, amount, otp) =>
-      `Dumela ${name}! Madi ya gago ya SASSA ya R${amount.toFixed(2)} a letile go amogelwa. ` +
-      `Etela lebenkele le le gaufi le wena le ID ya gago go hwetsa madi ya gago. PIN ya gago ke ${otp}.`,
+      `Dumela ${name}! Tšhelete ya gago ya SASSA, e lekanago R${amount.toFixed(2)} e itokišeditše go tšeelwa. ` +
+      `O ka ya lebenkeleng la moemedi le le ngwadišitšwego le le gaufi le gago le ID ya gago. ` +
+      `OTP ya gago ke ${otp}. Le ka mohla o se abelane le motho le OTP ye. ` +
+      `Ditefelo ka moka di feletše, bega ditshenyagalelo dife goba dife tše di okeditšwego. @Ubuntu PAY`,
     call: (name, amount, otp) =>
-      `Dumela ${name}. Ke QuikPay. ` +
-      `Madi ya gago ya SASSA ya R${amount.toFixed(2)} e a letile. ` +
-      `PIN ya gago ke ${otp}. ` +
-      `Etela lebenkele le le gaufi le wena le ID ya gago go hwetsa madi ya gago. Ke a leboga.`,
+      `Dumela ${name}. Ke Ubuntu PAY. ` +
+      `Tšhelete ya gago ya SASSA, e lekanago R${amount.toFixed(2)} e itokišeditše go tšeelwa. ` +
+      `O ka ya lebenkeleng la moemedi le le ngwadišitšwego le le gaufi le gago le ID ya gago. ` +
+      `OTP ya gago ke ${otp}. Le ka mohla o se abelane le motho le OTP ye. ` +
+      `Ditefelo ka moka di feletše. Hle bega ditshenyagalelo dife goba dife tše di okeditšwego. Sala gabotse.`,
   },
 };
 
